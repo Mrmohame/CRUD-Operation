@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Project</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--     
+        <div class="modal-header d-flex justify-content-between">
+        <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel1">
+          there is an error
+          
+                  </h1> 
+          
+                  <i onclick="good()" class=" fa-solid fa-xmark"></i>
+
+      </div>    
+      <div class="modal-body ">
+        <h2 class="fs-5 fw-bold mb-4">Product values are not valid, Please follow the rules below : </h2>
+        <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i> Product name must contain at least <span class="text-warning">3</span> characters </h3>
+        <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i>Product Price must be more than or equal <span class="text-warning">3</span> numbers </h3>
+        <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i> Product Des must be more than or equal <span class="text-warning">2</span> characters </h3>
+        <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i>Product Cat must be equal any option that are in the list </h3>
+               </div>
+-->
+
+ <header class="position-relative">
+
+  <div class="modal fade error0" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between">
+          <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel1">
+            there is an error
+            
+                    </h1> 
+            
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  
+        </div>    
+        <div class="modal-body ">
+          <h2 class="fs-5 fw-bold mb-4">Product values are not valid, Please follow the rules below : </h2>
+          <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i> Product name must contain at least <span class="text-warning">3</span> characters </h3>
+          <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i>Product Price must be more than or equal <span class="text-warning">3</span> numbers </h3>
+          <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i> Product Des must be more than or equal <span class="text-warning">2</span> characters </h3>
+          <h3 class="fs-6 my-2"> <i class="fa-regular fa-circle-right text-danger p-1"></i>Product Cat must be equal any option that are in the list </h3>
+                 </div>
+        <!--  data-bs-dismiss="modal" -->
+   
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade error1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Your Card</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="productName1" placeholder="name@example.com">
+          <label for="floatingInput">Produc Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="productPrice1" placeholder="name@example.com">
+          <label for="floatingInput">Product Price</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="productDes1" placeholder="name@example.com">
+          <label for="floatingInput">Product des</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input list="productOptions1" type="text" class="form-control" id="productCat1" placeholder="name@example.com">
+          <datalist id="productOptions1">
+              <option value="tv">
+              <option value="laptop">
+                  <option value="mobile">
+                      <option value="tab">
+                          <option value="sports">
+        
+          </datalist>
+          <label for="floatingInput">Product cat</label>
+        
+        </div>
+        <div class="form-floating mb-3">
+          <input type="file" class="form-control" id="productImage1" placeholder="name@example.com">
+          <label for="floatingInput">Product image</label>
+        </div>
+
+
+      </div>
+      <!--  data-bs-dismiss="modal" -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="update" type="button" class="btn btn-primary" >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container w-50 mx-auto py-4">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="productName" placeholder="name@example.com">
+    <label for="floatingInput">Produc Name</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="productPrice" placeholder="name@example.com">
+    <label for="floatingInput">Product Price</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="productDes" placeholder="name@example.com">
+    <label for="floatingInput">Product des</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input list="productOptions" type="text" class="form-control" id="productCat" placeholder="name@example.com">
+    <datalist id="productOptions">
+        <option value="tv">
+        <option value="laptop">
+            <option value="mobile">
+                <option value="tab">
+                    <option value="sports">
+  
+    </datalist>
+    <label for="floatingInput">Product cat</label>
+  
+  </div>
+  <div class="form-floating mb-3">
+    <input type="file" class="form-control" id="productImage" placeholder="name@example.com">
+    <label for="floatingInput">Product image</label>
+  </div>
+  <button  type="button" class="btn btn-danger mx-auto d-block" id="add">
+    add card
+    </button>
+
+    <!-- update -->
+    <!-- <button  type="button" class="btn btn-warning mx-auto d-none" id="update" >
+      Update card
+      </button> -->
+
+  <input type="text" placeholder="search" class="form-control py-2 my-3 search_input" >
+</div>
+
+<div class="container w-75">
+  <div class="row g-3 display">
+
+  </div>
+</div>
+ </header>
+ <div class="modal fade eror" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">There is an <span class="text-warning">error</span> </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<h2 class="text-danger">You Must write a correct values</h2>
+      </div>
+    </div>
+  </div>
+</div>
+                
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

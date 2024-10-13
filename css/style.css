@@ -1,0 +1,43 @@
+.f_page{
+    background-color: rgb(41, 40, 40);
+}
+.backg{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.width{
+    width: 30%;
+}
+.space{
+    top: 5%;
+    right: 5%;
+    
+}
+.modal-header i{
+    cursor: pointer;
+}
+.modal-header,.modal-body{
+    border-bottom: 0 !important;
+
+}
+.modal-header{
+height: 50px;
+}
+.modal-title p{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+margin-top: 1rem;
+    display: inline-block;
+}
+.backg{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.width{
+    width: 30%;
+}
+.error_icon{
+    width: 15px;
+    height: 15px;
+border-radius: 50%;
+border: 1px solid tomato;
+}
